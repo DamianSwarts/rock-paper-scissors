@@ -6,3 +6,29 @@ function getComputerChoice(){
     
     return(myArray[(Math.floor(Math.random() * myArray.length))]);   
 }
+
+/* Write a function that plays a single round of Rock Paper Scissors. 
+The function takes two parameters - the playerSelection and computerSelection - 
+and then returns a string that declares the winner or tie of the round. */
+
+function playRound(playerSelection, computerSelection) {   
+    var result;    
+    if (
+        playerSelection === "rock" && computerSelection === "Scissors" ||
+        playerSelection === "paper" && computerSelection === "Rock" || 
+        playerSelection === "scissors" && computerSelection === "Paper")
+    {
+        result = `You win! ${playerSelection[0].toUpperCase() + playerSelection.substring(1)} beats ${computerSelection}.`;
+        return result;     
+    } else if (
+        playerSelection === "rock" && computerSelection === "Paper" ||
+        playerSelection === "paper" && computerSelection === "Scissors" || 
+        playerSelection === "scissors" && computerSelection === "Rock")
+    {
+        result = `You lose! ${computerSelection} beats ${playerSelection[0].toUpperCase() + playerSelection.substring(1)}.`;
+        return result;
+    } else {
+        result = "This round ended in a draw."
+        return result;
+    }   
+}
