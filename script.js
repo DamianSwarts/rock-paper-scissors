@@ -32,3 +32,8 @@ function playRound(playerSelection, computerSelection) {
         return result;
     }   
 }
+
+// Call the functions, prompt the user for input and display the results to the console.
+let playerSelection = prompt("Choose your weapon: Rock, Paper or Scissors?");
+const computerSelection = getComputerChoice();
+console.log(playRound(playerSelection.toLowerCase(), computerSelection));
