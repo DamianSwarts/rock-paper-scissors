@@ -48,16 +48,23 @@ button:hover{
 
 #gameResult{
     padding-top: 10px;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 900;
 }
 
+.scoreboard{
+    text-align:center;
+    margin-top: 10px;
+    padding: 10px 0;
+    font-size: 2rem;
+}
+
 /* Style to be applied only if the user wins a round*/
-.greenWinText{
+.greenWinText, #player-score{
     color: rgb(112, 187, 1);
 }
 
 /* Style to be applied only if the user loses a round*/
-.redLosingText{
+.redLosingText, #computer-score{
     color: rgb(255, 0, 0);
 }

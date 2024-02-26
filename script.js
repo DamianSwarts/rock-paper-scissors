@@ -2,7 +2,10 @@ const computerChoices = ["rock", "paper", "scissors"];
 const playerResult = document.getElementById("playerResult");
 const computerResult = document.getElementById("computerResult");
 const gameResult = document.getElementById("gameResult");
-
+const playerScoreDisplay = document.getElementById("player-score");
+const computerScoreDisplay = document.getElementById("computer-score");
+let computerScore = 0;
+let playerScore= 0;
 // Function that plays a round of Rock, Paper, Scissors every time the user presses a button
 function playGame(playerSelection){
     // Select a random choice out of an array to use as the computer's play.
@@ -24,7 +27,7 @@ function playGame(playerSelection){
                 break;
             }
     }
-    playerResult.textContent = `PLAYER:  ${playerSelection}`;
+    playerResult.textContent = `PLAYER: ${playerSelection}`;
     computerResult.textContent = `COMPUTER:  ${computerSelection}`;
     gameResult.textContent = result;
 
@@ -36,9 +39,13 @@ function playGame(playerSelection){
     switch (result){
         case "YOU WIN!":
             gameResult.classList.add("greenWinText");
+            playerScore++;
+            playerScoreDisplay.textContent = playerScore;
             break;
         case "YOU LOSE!":
             gameResult.classList.add("redLosingText");
+            computerScore++;
+            computerScoreDisplay.textContent = computerScore;
             break;
     }
 }
