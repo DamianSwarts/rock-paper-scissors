@@ -27,8 +27,10 @@ function playGame(playerSelection){
                 break;
             }
     }
-    playerResult.textContent = `PLAYER: ${playerSelection}`;
-    computerResult.textContent = `COMPUTER:  ${computerSelection}`;
+    let capPlayerSelection = capitalize(playerSelection);
+    playerResult.textContent = `PLAYER: ${capPlayerSelection}`;
+    let capComputerSelection = capitalize(computerSelection);
+    computerResult.textContent = `COMPUTER:  ${capComputerSelection}`;
     gameResult.textContent = result;
 
     // With each new game, reset the color back to the original
@@ -49,3 +51,10 @@ function playGame(playerSelection){
             break;
     }
 }
+
+// Function to capitalize a string
+function capitalize(string) {
+    return (
+      string.toLowerCase().charAt(0).toUpperCase() + string.toLowerCase().slice(1)
+    );
+  }
