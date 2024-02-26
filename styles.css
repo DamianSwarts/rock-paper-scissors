@@ -51,3 +51,13 @@ button:hover{
     font-size: 2rem;
     font-weight: 900;
 }
+
+/* Style to be applied only if the user wins a round*/
+.greenWinText{
+    color: rgb(112, 187, 1);
+}
+
+/* Style to be applied only if the user loses a round*/
+.redLosingText{
+    color: rgb(255, 0, 0);
+}
