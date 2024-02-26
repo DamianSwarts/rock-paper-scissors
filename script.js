@@ -28,6 +28,9 @@ function playGame(playerSelection){
     computerResult.textContent = `COMPUTER:  ${computerSelection}`;
     gameResult.textContent = result;
 
+    // With each new game, reset the color back to the original
+    gameResult.classList.remove("greenWinText", "redLosingText");
+
     /*Change the color of the text to green if the user wins 
     and red if the user loses*/
     switch (result){
