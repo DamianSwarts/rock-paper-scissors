@@ -50,11 +50,38 @@ function playGame(playerSelection){
             computerScoreDisplay.textContent = computerScore;
             break;
     }
-}
 
+    if (playerScore === 5){
+        gameResult.classList.add("greenWinText");
+        result = "YOU WON THE GAME!!! CONGRATS"
+        gameResult.textContent = result;
+        restartGame()
+    }
+    else if (computerScore === 5){
+        gameResult.classList.add("redLosingText");
+        result = "YOU LOST THE GAME!"
+        gameResult.textContent = result;
+        restartGame()
+    }
+}
 // Function to capitalize a string
 function capitalize(string) {
     return (
       string.toLowerCase().charAt(0).toUpperCase() + string.toLowerCase().slice(1)
     );
+}
+
+// Function to restart the game
+function restartGame(){
+    playerScore = 0;
+    computerScore = 0;
+    playerResult.textContent = "PLAYER:"
+    computerResult.textContent = "COMPUTER:"
+    playerScoreDisplay.textContent = playerScore;
+    computerScoreDisplay.textContent = computerScore;
+}
+
+// Function to see if the game is over
+function isGameOver() {
+    return playerScore === 5 || computerScore === 5
   }
