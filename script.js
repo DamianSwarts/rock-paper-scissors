@@ -80,8 +80,3 @@ function restartGame(){
     playerScoreDisplay.textContent = playerScore;
     computerScoreDisplay.textContent = computerScore;
 }
-
-// Function to see if the game is over
-function isGameOver() {
-    return playerScore === 5 || computerScore === 5
-  }
